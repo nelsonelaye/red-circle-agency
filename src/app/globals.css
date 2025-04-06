@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@layer base {
+  /* Fallback for browsers that don't support -webkit-text-stroke */
+  @supports not (-webkit-text-stroke: 1px black) {
+    .text-transparent {
+      position: relative;
+      color: transparent;
+    }
+    .text-transparent::before {
+      content: "";
+      position: absolute;
+      -webkit-text-stroke: 1px black;
+      left: 0;
+      /* text-stroke: 1px black; */
+    }
+  }
+}
+
+@font-face {
+  font-family: "sfprodisplay";
+  src: url(../assets/fonts/sfprodisplay_regular.OTF);
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "sfprodisplay", sans-serif;
+  font-size: 16px;
+  line-height: 15px;
+}
+
+main {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.cursor-outline {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #eee;
+}
+
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.2s ease;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.cursor-outline:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 0 112.5px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  main {
+    padding: 0 125px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  main {
+    padding: 0 225px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    line-height: 19px;
+  }
+}
+
+.cursor {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  z-index: 99999;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: height 300ms ease, width 300ms ease, background-color 200ms ease;
+}
+
+.marquee {
+  width: 100%;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-content {
+  /* display: inline-block; */
+  /* white-space: nowrap; */
+  animation: marquee 5s linear infinite;
+}
+
+.marquee-content span {
+  display: inline-block;
+  padding-right: 2rem; /* Adjust spacing if needed */
+}
+
+.carousel {
+  animation: scrolling 10s linear infinite;
+  display: flex;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0) translateZ(0); /* Start position */
+  }
+  to {
+    transform: translateX(-50%) translateZ(0); /* Move left by half the content width */
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slide-up 1s linear;
+}

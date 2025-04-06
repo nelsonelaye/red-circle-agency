@@ -15,6 +15,7 @@ import SectionCopy from "@/components/SectionCopy";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import MotionWrap from "@/components/MotionWrap";
+import dayjs from "dayjs";
 
 export default function Home() {
   const cities = ["lagos", "Nairobi", "Kigali", "Lome"];
@@ -51,7 +52,7 @@ export default function Home() {
         <section className="w-full  mx-auto pt-24">
           <div className="sm:flex">
             <div className="w-[18%] h-full whitespace-nowrap text-[12px] font-semibold sm:text-base">
-              18:07 PM
+              {dayjs().format("HH:mm A")}
             </div>
             <div className="w-fit py-6">
               <motion.h1

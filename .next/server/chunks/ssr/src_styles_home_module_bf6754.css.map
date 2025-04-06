@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/macbook/Desktop/Projects/circle-agency/src/styles/home.module.css"],"sourcesContent":[".hero-header {\r\n  font-size: 9em;\r\n  font-weight: 600;\r\n  line-height: 0.92;\r\n  letter-spacing: -2.5px;\r\n  text-transform: uppercase;\r\n  margin: 24px 0;\r\n}\r\n\r\n@keyframes slideUp {\r\n  0% {\r\n    transform: translateY(100%);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(0);\r\n  }\r\n}\r\n\r\n.slide-up {\r\n  transform: translateY(0);\r\n  transition: all 300ms ease-in-out;\r\n  animation-name: slideUp;\r\n  animation-duration: 1s;\r\n  animation-delay: -3s;\r\n  animation-fill-mode: forwards;\r\n  animation-iteration-count: infinite;\r\n}\r\n\r\n.scale-up {\r\n  transform: scale(0%, 0%);\r\n  transition: transform 300ms ease-in-out;\r\n}\r\n\r\n.text-stroke {\r\n  -webkit-text-stroke-width: 3px;\r\n  -webkit-text-stroke-color: black;\r\n    color:#fff;\r\n\r\n}\r\n\r\n.project-circle:hover {\r\n  color: white;\r\n}\r\n\r\n.project-circle:hover .scale-up {\r\n  transform: scale(100%, 100%);\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;;;;;;;;;;AAUA;;;;;;;;;;AAUA;;;;;AAKA;;;;;;AAOA;;;;AAIA"}},
-    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

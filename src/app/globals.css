@@ -49,6 +49,7 @@ main {
 }
 
 .cursor-outline {
+  display: none;
   width: 70px;
   height: 70px;
   border: 2px solid #eee;
@@ -70,9 +71,23 @@ main {
   transform: scale(1.2);
 }
 
+.clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Additional property to force hardware acceleration on mobile */
+  transform: translateZ(0);
+}
+
+@media screen and (min-width: 768px) {
+}
+
 @media screen and (min-width: 1024px) {
   main {
     padding: 0 100px;
+  }
+
+  .cursor-outline {
+    display: block;
   }
 }
 

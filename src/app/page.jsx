@@ -98,12 +98,17 @@ export default function Home() {
                 exit={{ y: -100, opacity: 1 }} // Moves up before disappearing
                 transition={{ duration: 0.3, ease: "linear" }}
                 style={{
-                  WebkitTextStroke: "2px black",
-                  textStroke: "2px black",
+                  position: "relative",
+                  color: "white", // Interior color (can be transparent)
+                  textShadow:
+                    "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black," +
+                    "-1px -1px black, 1px -1px black, -1px 1px black, 1px 1px black",
                   fontFamily: "sans-serif",
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
                 }}
                 className={clsx(
-                  "tracking-wider text-transparent overflow-hidden !leading-[70px] md:!leading-[150px] md:!text-[9em]",
+                  "tracking-wider overflow-hidden !leading-[70px] md:!leading-[150px] md:!text-[9em]",
                   styles["hero-header"]
                 )}
               >
@@ -130,7 +135,7 @@ export default function Home() {
         </section>
 
         <section className="pb-[80px] sm:pb-[150px]">
-          <div className="w-full lg:w-[70%] mb-[20px] lg:mb-[100px] py-[40px]">
+          <div className="w-full lg:w-[70%] lg:mb-[100px] py-[40px]">
             <Image
               src={team}
               height={990}
@@ -145,7 +150,7 @@ export default function Home() {
             </MotionWrap>
           </div>
 
-          <div className="ml-auto w-full lg:w-[70%] mb-[20px] sm:mb-[100px] py-[40px]">
+          <div className="ml-auto w-full lg:w-[70%] sm:mb-[100px] py-[40px]">
             <Image
               src={office}
               height={990}

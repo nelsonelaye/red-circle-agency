@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/circle-button.png" sizes="any" />
-        <Script src="/scripts/cursor.js" strategy="lazyOnload" />
+        <Script src="/scripts/cursor.js" strategy="lazyOnload" type="module" />
         {/* <script type="text/javascript" src="/scripts/cursor.js"></script> */}
       </head>
       <body

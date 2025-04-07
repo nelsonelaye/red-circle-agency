@@ -30,7 +30,7 @@ const Header = () => {
         href="#"
         className={clsx(
           styles["project-btn"],
-          "ml-auto sm:px-6 relative flex items-center justify-center whitespace-nowrap text-sm sm:text-base"
+          "ml-auto sm:px-6 relative flex items-center justify-center whitespace-nowrap text-[13px] sm:text-base"
         )}
       >
         <div className={styles.circle}></div>
